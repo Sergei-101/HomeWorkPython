@@ -1,4 +1,4 @@
-#Задание №1
+# Задание №1
 '''
 Задание 1.
 Поработайте с переменными, создайте несколько,
@@ -28,8 +28,8 @@ print(f'Ваши данные для входа в аккаунт: Имя - {nam
 '''
 
 a = float(input('Введите время в секундах '))
-hour = a/3600
-minute = a/60
+hour = a / 3600
+minute = a / 60
 print(f"Время в формате ч:м:с - {hour} : {minute} : {a}")
 
 '''
@@ -43,7 +43,7 @@ n + nn + nnn = 369
 a = input('Введите целое положительное число ')
 b = a+a
 c = a+a+a
-print(int(a)+int(b)+int(c))
+print(int(a) + int(b) + int(c))
 
 '''
 Задание 4.
@@ -66,12 +66,15 @@ print(int(a)+int(b)+int(c))
 
 enter_revenue = int(input('Введите выручку фирмы '))
 enter_costs = int(input('Введите издержки фирмы '))
-if enter_revenue>enter_costs:
+if enter_revenue > enter_costs:
     employees = int(input('Введите численность сотрудников'))
-    fin_resylt = enter_revenue-enter_costs
-    rent = fin_resylt/enter_revenue
-    profit_emp = fin_resylt/employees
+    fin_resylt = enter_revenue - enter_costs
+    rent = fin_resylt / enter_revenue
+    profit_emp = fin_resylt / employees
     print(f'Фирма отработала с прибылью = {fin_resylt}. Рентабильность выручки = {rent}, прибыль фирмы в расчете на одного сотрудника {profit_emp}')
+elif enter_revenue == enter_costs:
+    print("Фирма отработала в 0")
+
 else:
     print("Фирма отработала в убыток")
 
@@ -84,14 +87,14 @@ else:
 100 -> 1 (1 + 0 + 0) |
 '''
 
-n=int(input('Введите трехзначное число '))
-if 999>=n>=100:
-    sum = 0
-    while n>0:
-        z = n%10
-        sum = z+sum
-        n//=10
-    print(sum)
+n = int(input('Введите трехзначное число '))
+if 999 >= n >= 100:
+    sum_number = 0
+    while n > 0:
+        z = n % 10
+        sum_number = z + sum_number
+        n //= 10
+    print(sum_number)
 else:
     print('Я же просил трехзначное')
 
@@ -121,7 +124,7 @@ num = input('Введите номер билетика: ')
 res = [int(x) for x in str(num)]
 res_one = int(res[0])+int(res[1])+int(res[2])
 res_two = int(res[3])+int(res[4])+int(res[5])
-if res_one==res_two:
+if res_one == res_two:
     print('Поздравляем, у вас счастливый билетик')
 else:
     print('Может в другой раз повезет')
@@ -137,7 +140,7 @@ else:
 n = int(input('Введите кол-во долек n: '))
 m = int(input('Введите кол-во долек m: '))
 k = int(input('Сколько долек вы хотите отломить k: '))
-if (n-1)>=k or (m-1)>=k:
+if n-1 >= k or m-1 >= k:
     print(f'В шоколадке размером {n}*{m} можно отломить {k} дольки')
 else:
     print("Нет")
